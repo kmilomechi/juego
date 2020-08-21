@@ -1,0 +1,130 @@
+@font-face {
+    font-family: bit;
+    src: url(../8bit.ttf);
+}
+
+.texto {
+    padding-top: 100px;
+    font-family: bit;
+    color: #fff;
+    text-align: center;
+}
+.fondo{
+    background-image:url(../imagenes/Forest.png);
+    width:100%;
+    height:100vh;
+    background-size:cover;
+    background-position:center;
+}
+body{
+    margin:0;
+    padding:0;
+
+}
+*{
+    margin:0;
+    padding:0;
+    list-style:none;
+    text-decoration:none;
+}
+.sidebar {
+    position: fixed;
+    left: -100%;
+    width: 100%;
+    height: 100vh;
+    background-position:center;
+    background-size:cover;
+    background-image: url(../imagenes/fondo.png);
+    
+    transition: all .5s ease;
+}
+.sidebar header{
+    display:none;
+    font-size:22px;
+    color:white;
+    text-align:center;
+    line-height:70px;
+    background:#063146;
+    user-select:none;
+}
+.sidebar ul li{
+    width:200px;
+}
+.sidebar ul{
+    padding-top:85px;
+}
+    .sidebar ul a {
+        display:block;
+        width:250px;
+        line-height: 65px;
+        font-size: 15px;
+        font-family:bit;
+        color: white;
+        padding-left: 40px;
+        box-sizing: border-box;
+    }
+ul li:hover a {
+
+    padding-left: 50px;
+}
+    .sidebar ul a li{
+        margin-right:16px;
+    }
+#check{
+        display:none;
+}
+label #btn{
+        position:absolute;
+        cursor:pointer;
+}
+label #cancel {
+    position: absolute;
+    cursor: pointer;
+}
+label #btn {
+    position: absolute;
+    cursor: pointer;
+    left: 40px;
+    top: 25px;
+    font-size: 35px;
+    color: white;
+    padding: 6px 12px;
+    transition:all .5s ease;
+}
+label #cancel{
+    
+    z-index:1111;
+    left:-45px;
+    top:30px;
+    padding:6px 12px;
+    transition:all .5s ease;
+    height: 25px;
+}
+#check:checked ~ .sidebar{
+    left:0;
+}
+#check:checked ~ label #btn{
+    left:250px;
+    opacity:0;
+    pointer-events:none;
+}
+#check:checked ~ label #cancel {
+    left:45px; 
+}
+.galeria{
+    width:90%;
+    margin:auto;
+    list-style:none;
+    padding:20px;
+    box-sizing:border-box;
+    display: flex;
+    flex-wrap:wrap;
+    justify-content:space-around;
+}
+.galeria li{
+    margin:5px;
+}
+.galeria img{
+    width:150px;
+    height:100px;
+}
